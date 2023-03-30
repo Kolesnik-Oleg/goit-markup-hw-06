@@ -647,16 +647,12 @@ address {
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 2px;
  }
- .checkbox-input:checked + checkbox-icon-span .checkbox-icon {
+ .checkbox-input:checked + .checkbox-icon-span .checkbox-icon {
     opacity: 1;
     background-color: var(--hover-button);
     fill: var(--background-team-color);
  }
- .checkbox-input:focus + checkbox-icon-span .checkbox-icon {
-    opacity: 1;
-    background-color: var(--hover-button);
-    fill: var(--background-team-color);
-}
+ 
 .checkbox-icon {
     opacity: 0;
     width: 16px;
@@ -665,6 +661,19 @@ address {
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 2px;
     display: inline-block;
+    transition: background-color var(--transition-time) var(--timing-function)
+    ,;
+}
+.checkbox-link {
+    cursor: pointer;
+    color: var(--border);
+    text-decoration: none;
+    transition: background-color var(--transition-time) var(--timing-function),
+            color var(--transition-time) var(--timing-function);
+}
+.checkbox-link:hover,
+.checkbox-link:focus {
+    color: var(--accent-color);
 }
 /* Portfilio */
 .main-examples-title {
